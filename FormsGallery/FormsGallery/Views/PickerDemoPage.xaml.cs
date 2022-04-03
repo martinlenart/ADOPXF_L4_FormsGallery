@@ -22,6 +22,8 @@ namespace FormsGallery.Views
             else
             {
                 string colorName = picker.Items[picker.SelectedIndex];
+                
+                //Use reflection as Color does not have a Parse() Method
                 FieldInfo colorField = typeof(Color).GetRuntimeField(colorName);
                 boxView.Color = (Color)(colorField.GetValue(null));
             }
