@@ -9,5 +9,11 @@ namespace FormsGallery.Views
         {
             InitializeComponent();
         }
+
+        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            var dp = (DatePicker)sender;
+            lblDate.Text = $"Date is: {dp.Date:F}";
+        }
     }
 }

@@ -15,6 +15,13 @@ namespace FormsGallery.Views
         {
             Picker picker = (Picker)sender;
 
+            string colorName = (string) picker.SelectedItem;
+
+            //Use reflection as Color does not have a Parse() Method
+            FieldInfo colorField = typeof(Color).GetRuntimeField(colorName);
+            boxView.Color = (Color)(colorField.GetValue(null));
+
+            /*
             if (picker.SelectedIndex == -1)
             {
                 boxView.Color = Color.Default;
@@ -27,6 +34,7 @@ namespace FormsGallery.Views
                 FieldInfo colorField = typeof(Color).GetRuntimeField(colorName);
                 boxView.Color = (Color)(colorField.GetValue(null));
             }
+            */
         }
     }
 }

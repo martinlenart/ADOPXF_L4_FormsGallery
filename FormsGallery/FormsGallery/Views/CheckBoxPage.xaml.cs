@@ -8,5 +8,11 @@ namespace FormsGallery.Views
         {
             InitializeComponent();
         }
+
+        private void checkbox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            var chkbx = (CheckBox)sender;
+            lblAlternative.Text = $"Checkbox is now: {chkbx.IsChecked}";
+        }
     }
 }

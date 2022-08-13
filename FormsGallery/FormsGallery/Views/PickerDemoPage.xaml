@@ -12,7 +12,7 @@
         <Picker Title="Color"
                 VerticalOptions="CenterAndExpand"
                 Margin="10, 0" 
-                SelectedIndexChanged="OnPickerSelectedIndexChanged">
+                SelectedIndexChanged="OnPickerSelectedIndexChanged" Rotation="-30">
             <Picker.Items>
                 <x:String>Aqua</x:String>
                 <x:String>Black</x:String>
@@ -37,6 +37,6 @@
                  WidthRequest="150"
                  HeightRequest="150"
                  HorizontalOptions="Center"
-                 VerticalOptions="CenterAndExpand" />
+                 VerticalOptions="CenterAndExpand" Opacity="0.5" />
     </StackLayout>
 </ContentPage>
